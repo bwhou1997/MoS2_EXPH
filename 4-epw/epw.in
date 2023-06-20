@@ -1,0 +1,63 @@
+--
+&inputepw
+  prefix      = 'MoS2'
+  amass(1)    =95.94
+  amass(2)    =32.066
+  outdir      = './'
+
+  elph        = .true.
+  epbwrite    = .true.
+  epbread     = .false.
+  epwwrite    = .true.
+  epwread     = .false.
+  ephwrite    = .true.
+
+ 
+  wannierize  = .true.
+  nbndsub
+  num_iter    = 5000
+
+  dis_win_max       =  50
+  dis_win_min       = -15
+  dis_froz_max      =  10
+  dis_froz_min      = -10
+
+  proj(1)     = 'Mo:l=1;l=2'
+  proj(2)     = 'S:l=1'
+
+  wdata(1) ='use_ws_distance = .true.'
+  wdata(2) ='dis_num_iter    =  1000'
+  wdata(3) = 'guiding_centres = .true.'
+  wdata(4) = 'bands_plot = .true.'
+  wdata(5) = 'begin kpoint_path'
+  wdata(6) = 'G 0.00 0.00 0.00 K 0.33 0.33 0.00'
+  wdata(7) = 'K 0.33 0.33 0.00 M 0.50 0.00 0.00'
+  wdata(8) = 'M 0.50 0.00 0.00 G 0.00 0.00 0.00'
+  wdata(9) = 'end kpoint_path'
+  wdata(10) = 'bands_plot_format = gnuplot'
+
+
+  prtgkk = .true.
+  efermi_read = .true.
+  fermi_energy = 0
+
+  fsthick     = 1.7
+  degaussw    = 0.01
+
+  dvscf_dir   = './save'
+  filukk = './MoS2.ukk'
+
+  nk1         = 24
+  nk2         = 24
+  nk3         = 1
+  nq1         = 24
+  nq2         = 24
+  nq3         = 1
+
+  nqf1         = 24
+  nqf2         = 24
+  nqf3         = 1
+  nkf1         = 24
+  nkf2         = 24
+  nkf3         = 1
+/

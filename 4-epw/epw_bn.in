@@ -1,0 +1,68 @@
+--
+&inputepw
+  prefix        = 'bn'
+  amass(1)      = 11 
+  amass(2)      = 14
+  outdir        = './'
+
+  elph          = .true.
+  epbwrite      = .true.
+  epbread       = .false.
+  epwwrite      = .true.
+  epwread       = .false.
+  ephwrite    = .true.
+
+  wannierize    = .true.
+  nbndsub       = 6
+  num_iter      = 2000
+
+
+  dis_win_max   =  25
+  dis_win_min   = -15
+  dis_froz_min  = -6
+  dis_froz_max  =  4
+
+  proj(1)       = 'B:sp2'
+  proj(2)       = 'N:sp2'
+
+  wdata(1)      = 'guiding_centres = .true.'
+  wdata(2)      = 'bands_plot = .true.'
+  wdata(3)      = 'begin kpoint_path'
+  wdata(4)      = 'K 0.33333 -0.66667  0.00000  G 0.00000  0.00000  0.00000  50'
+  wdata(5)      = 'G 0.00000  0.00000  0.00000  M 0.50000 -0.50000  0.00000  50'
+  wdata(6)      = 'M 0.50000 -0.50000  0.00000  K 0.33333 -0.66667  0.00000  50'
+  wdata(7)      = 'K 0.33333 -0.66667  0.00000  H 0.33333 -0.66667  0.50000  50'
+  wdata(8)      = 'H 0.33333 -0.66667  0.50000  A 0.00000  0.00000  0.50000  50'
+  wdata(9)      = 'A 0.00000  0.00000  0.50000  L 0.50000 -0.50000  0.50000  0 '
+  wdata(10)     = 'end kpoint_path'
+  wdata(11)     = 'dis_num_iter  =  2000'
+
+  asr_typ       = 'crystal'
+
+  elecselfen    = .false.
+  phonselfen    = .false.
+  a2f           = .false.
+
+
+  prtgkk        = .true.
+
+
+  fsthick       = 7
+  temps         = 77
+
+  dvscf_dir     = './save'
+
+  nk1         = 9
+  nk2         = 9
+  nk3         = 1
+  nq1         = 9
+  nq2         = 9
+  nq3         = 1
+
+  nkf1         = 9
+  nkf2         = 9
+  nkf3         = 1
+  nqf1         = 9
+  nqf2         = 9
+  nqf3         = 1
+/

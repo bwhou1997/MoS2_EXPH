@@ -1,0 +1,10 @@
+--
+&inputph
+  tr2_ph  = 1.0d-15,
+  prefix  = 'MoS2',
+  ldisp   = .true.,
+  nq1=24, nq2=24, nq3=1
+  outdir  = './',
+  fildyn  = 'MoS2.dyn',
+  fildvscf= 'dvscf'
+/
