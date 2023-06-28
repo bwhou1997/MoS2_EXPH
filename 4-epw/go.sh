@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J epw       # Job name
+#SBATCH -J phonon       # Job name
 #SBATCH -o myjob.o%j       # Name of stdout output file
 #SBATCH -e myjob.e%j       # Name of stderr error file
 #SBATCH -p development          # Queue (partition) name
@@ -22,8 +22,9 @@ EPW="/scratch1/08237/bwhou/test/EPW/q-e-qe-6.6/bin"
 #export OMP_NUM_THREADS=14
 pwd
 date
+module load impi/19.0.9
 #
-ibrun $EPW/pw.x -nk 16 -input scf.in > scf.out
-ibrun $EPW/ph.x -nk 16 -input ph.in > ph.out
+#ibrun $EPW/pw.x -nk 16 -input scf.in > scf.out
+#ibrun $EPW/ph.x -nk 16 -input ph.in > ph.out
 ibrun $EPW/pw.x -nk 16 -input nscf.in > nscf.out
 #ibrun $EPW/epw.x -npool 576 -input  epw.in > epw.out
