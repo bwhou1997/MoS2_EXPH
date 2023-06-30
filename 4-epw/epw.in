@@ -11,19 +11,20 @@
   epwwrite    = .true.
   epwread     = .false.
   ephwrite    = .true.
+  bands_skipped = 'exclude_bands = 1:24,35:36'
 
  
   wannierize  = .true.
-  nbndsub
-  num_iter    = 5000
+  nbndsub = 10
+  num_iter    = 10
 
-  dis_win_max       =  50
-  dis_win_min       = -15
-  dis_froz_max      =  10
-  dis_froz_min      = -10
+!  dis_win_max       =  50
+!  dis_win_min       = -15
+!  dis_froz_max      =  10
+!  dis_froz_min      = -10
 
-  proj(1)     = 'Mo:l=1;l=2'
-  proj(2)     = 'S:l=1'
+  proj(1)     = 'Mo:l=1'
+  proj(2)     = 'S:l=0'
 
   wdata(1) ='use_ws_distance = .true.'
   wdata(2) ='dis_num_iter    =  1000'
