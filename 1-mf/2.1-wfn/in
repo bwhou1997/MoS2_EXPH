@@ -14,7 +14,7 @@ ibrav = 0
 nat = 3
 ntyp =2
 ecutwfc         = 95,
-nbnd = 500
+nbnd = 150
 lspinorb = .true.
 noncolin = .true.
 
