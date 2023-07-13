@@ -1,5 +1,5 @@
-number_val_bands_fine 8
-number_val_bands_coarse 8
+number_val_bands_fine 4
+number_val_bands_coarse 4
 
 number_cond_bands_fine 8
 number_cond_bands_coarse 8
@@ -10,4 +10,3 @@ use_symmetries_coarse_grid
 
 use_momentum
 kpt_interpolation_linear
-unrestricted_transformation
